@@ -11,7 +11,7 @@ interface AppShellProps {
   profile: Profile;
   streak: number;
   searchItems: SearchItem[];
-  demoMode: boolean;
+  localMode: boolean;
   children: ReactNode;
 }
 
@@ -19,7 +19,7 @@ export function AppShell({
   profile,
   streak,
   searchItems,
-  demoMode,
+  localMode,
   children,
 }: AppShellProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -46,7 +46,7 @@ export function AppShell({
         <Topbar
           profile={profile}
           streak={streak}
-          demoMode={demoMode}
+          localMode={localMode}
           onOpenSearch={() => setSearchOpen(true)}
           onOpenMobileNav={() => setMobileOpen(true)}
         />

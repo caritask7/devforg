@@ -12,10 +12,10 @@ import { resetPasswordAction } from "../actions";
 
 interface ResetPasswordFormProps {
   token: string;
-  demoMode: boolean;
+  localMode: boolean;
 }
 
-export function ResetPasswordForm({ token, demoMode }: ResetPasswordFormProps) {
+export function ResetPasswordForm({ token, localMode }: ResetPasswordFormProps) {
   const [state, formAction, pending] = useActionState<FormState, FormData>(
     resetPasswordAction,
     {},
@@ -33,7 +33,7 @@ export function ResetPasswordForm({ token, demoMode }: ResetPasswordFormProps) {
         </p>
       </div>
 
-      {demoMode && !token ? (
+      {localMode && !token ? (
         <Alert tone="info">
           Ce lien ne contient pas de jeton.{" "}
           <Link href="/mot-de-passe-oublie" className="font-semibold underline">

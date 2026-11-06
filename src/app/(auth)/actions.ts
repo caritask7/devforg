@@ -2,12 +2,12 @@
 
 import { randomUUID } from "node:crypto";
 import { redirect } from "next/navigation";
-import { isDemoMode, siteUrl } from "@/lib/config";
+import { isLocalMode, siteUrl } from "@/lib/config";
 import { repository } from "@/lib/data";
-import { readDatabase, updateDatabase } from "@/lib/demo/db";
-import { hashPassword, verifyPassword } from "@/lib/demo/password";
-import { createDemoResetToken, resetDemoPassword } from "@/lib/demo/reset";
-import { createDemoSession, getCurrentUser } from "@/lib/auth/session";
+import { readDatabase, updateDatabase } from "@/lib/local/database";
+import { hashPassword, verifyPassword } from "@/lib/local/password";
+import { createLocalResetToken, resetLocalPassword } from "@/lib/local/reset";
+import { createLocalSession, getCurrentUser } from "@/lib/auth/session";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import {
   fieldErrorsFromZod,
@@ -40,7 +40,7 @@ export async function signInAction(
 
   const { email, password } = parsed.data;
 
-  if (isDemoMode) {
+  if (isLocalMode) {
     const db = await readDatabase();
     const user = db.users.find(
       (item) => item.email.toLowerCase() === email.toLowerCase(),
@@ -48,7 +48,7 @@ export async function signInAction(
     if (!user || !verifyPassword(password, user.passwordHash)) {
       return { error: "E-mail ou mot de passe incorrect." };
     }
-    await createDemoSession(user.id);
+    await createLocalSession(user.id);
     redirect("/dashboard");
   }
 
@@ -74,7 +74,7 @@ export async function signUpAction(
 
   const { fullName, email, password } = parsed.data;
 
-  if (isDemoMode) {
+  if (isLocalMode) {
     const db = await readDatabase();
     const existing = db.users.find(
       (item) => item.email.toLowerCase() === email.toLowerCase(),
@@ -105,7 +105,7 @@ export async function signUpAction(
       dailyGoalMinutes: profile.dailyGoalMinutes,
     });
 
-    await createDemoSession(userId);
+    await createLocalSession(userId);
     redirect("/dashboard");
   }
 
@@ -148,8 +148,8 @@ export async function requestPasswordResetAction(
     };
   }
 
-  if (isDemoMode) {
-    const token = await createDemoResetToken(parsed.data.email);
+  if (isLocalMode) {
+    const token = await createLocalResetToken(parsed.data.email);
     return {
       success:
         "Si un compte correspond à cette adresse, un lien de réinitialisation a été généré.",
@@ -184,9 +184,9 @@ export async function resetPasswordAction(
     };
   }
 
-  if (isDemoMode) {
+  if (isLocalMode) {
     const token = parsed.data.token ?? "";
-    const ok = await resetDemoPassword(token, parsed.data.password);
+    const ok = await resetLocalPassword(token, parsed.data.password);
     if (!ok) {
       return { error: "Ce lien de réinitialisation est invalide ou expiré." };
     }

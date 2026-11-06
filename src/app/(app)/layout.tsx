@@ -1,6 +1,6 @@
 import { AppShell } from "@/components/layout/app-shell";
 import { requireUser } from "@/lib/auth/session";
-import { isDemoMode } from "@/lib/config";
+import { isLocalMode } from "@/lib/config";
 import { repository } from "@/lib/data";
 import { loadSearchItems } from "@/lib/data/queries";
 import { computeStreak } from "@/lib/utils";
@@ -35,7 +35,7 @@ export default async function AppLayout({
       profile={profile}
       streak={streak}
       searchItems={searchItems}
-      demoMode={isDemoMode}
+      localMode={isLocalMode}
     >
       {children}
     </AppShell>

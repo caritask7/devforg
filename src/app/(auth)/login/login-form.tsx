@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useActionState, useState } from "react";
-import { ArrowRight, Loader2, Sparkles } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
 import { Alert } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Field } from "@/components/ui/form-field";
@@ -10,11 +10,7 @@ import { Input } from "@/components/ui/input";
 import type { FormState } from "@/lib/validation";
 import { signInAction } from "../actions";
 
-interface LoginFormProps {
-  demo: { email: string; password: string } | null;
-}
-
-export function LoginForm({ demo }: LoginFormProps) {
+export function LoginForm() {
   const [state, formAction, pending] = useActionState<FormState, FormData>(
     signInAction,
     {},
@@ -85,34 +81,6 @@ export function LoginForm({ demo }: LoginFormProps) {
           {!pending ? <ArrowRight /> : null}
         </Button>
       </form>
-
-      {demo ? (
-        <div className="rounded-xl border border-accent/15 bg-accent-soft/70 p-4">
-          <div className="flex items-start gap-2.5">
-            <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
-            <div className="min-w-0 flex-1">
-              <p className="text-[12.5px] font-semibold text-ink">Compte de démonstration</p>
-              <p className="mt-1 font-mono text-[11.5px] leading-relaxed text-[#55607a]">
-                {demo.email}
-                <br />
-                {demo.password}
-              </p>
-              <Button
-                type="button"
-                variant="secondary"
-                size="sm"
-                className="mt-3"
-                onClick={() => {
-                  setEmail(demo.email);
-                  setPassword(demo.password);
-                }}
-              >
-                Pré-remplir les identifiants
-              </Button>
-            </div>
-          </div>
-        </div>
-      ) : null}
 
       <p className="text-center text-[13px] text-muted">
         Pas encore de compte ?{" "}

@@ -31,5 +31,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-# demo mode local database (contains local demo accounts)
-/data/demo-db.json
+# local mode database (contains real local accounts)
+/data/local-db.json

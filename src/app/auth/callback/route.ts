@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { isDemoMode } from "@/lib/config";
+import { isLocalMode } from "@/lib/config";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 function safeNext(value: string | null): string {
@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
   const code = url.searchParams.get("code");
   const next = safeNext(url.searchParams.get("next"));
 
-  if (isDemoMode) {
+  if (isLocalMode) {
     return NextResponse.redirect(new URL("/login", url.origin));
   }
 

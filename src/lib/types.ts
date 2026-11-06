@@ -1,4 +1,4 @@
-/** Types métier partagés entre le dépôt Supabase et le mode démonstration. */
+/** Types métier partagés entre le dépôt Supabase et le stockage local. */
 
 export type Difficulty = "debutant" | "intermediaire" | "avance";
 

@@ -9,7 +9,7 @@ import type { Profile } from "@/lib/types";
 interface TopbarProps {
   profile: Profile;
   streak: number;
-  demoMode: boolean;
+  localMode: boolean;
   onOpenSearch: () => void;
   onOpenMobileNav: () => void;
 }
@@ -17,7 +17,7 @@ interface TopbarProps {
 export function Topbar({
   profile,
   streak,
-  demoMode,
+  localMode,
   onOpenSearch,
   onOpenMobileNav,
 }: TopbarProps) {
@@ -47,13 +47,13 @@ export function Topbar({
       </button>
 
       <div className="ml-auto flex items-center gap-2 sm:gap-3">
-        {demoMode ? (
+        {localMode ? (
           <span
             className="hidden items-center gap-1.5 rounded-full border border-amber-600/20 bg-warning-soft px-2.5 py-1 text-[11px] font-semibold text-warning sm:inline-flex"
-            title="Mode démonstration local : les données sont enregistrées dans data/demo-db.json"
+            title="Mode local : les données sont enregistrées dans data/local-db.json"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-warning" aria-hidden="true" />
-            Mode démo
+            Local
           </span>
         ) : null}
 

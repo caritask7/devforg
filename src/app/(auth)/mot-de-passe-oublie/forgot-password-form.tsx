@@ -35,7 +35,7 @@ export function ForgotPasswordForm() {
           <p>{state.success}</p>
           {state.resetUrl ? (
             <p className="mt-2">
-              Mode démonstration :{" "}
+              Mode local :{" "}
               <Link href={state.resetUrl} className="font-semibold underline">
                 ouvrir le lien de réinitialisation
               </Link>

@@ -1,11 +1,11 @@
 import { randomBytes } from "node:crypto";
-import { readDatabase, updateDatabase } from "./db";
+import { readDatabase, updateDatabase } from "./database";
 import { hashPassword } from "./password";
 
 const TOKEN_TTL_MS = 60 * 60 * 1000;
 
-/** Crée un jeton de réinitialisation (mode démonstration uniquement). */
-export async function createDemoResetToken(email: string): Promise<string | null> {
+/** Crée un jeton de réinitialisation (mode local uniquement). */
+export async function createLocalResetToken(email: string): Promise<string | null> {
   const db = await readDatabase();
   const user = db.users.find(
     (item) => item.email.toLowerCase() === email.trim().toLowerCase(),
@@ -25,14 +25,14 @@ export async function createDemoResetToken(email: string): Promise<string | null
   return token;
 }
 
-export async function isDemoResetTokenValid(token: string): Promise<boolean> {
+export async function isLocalResetTokenValid(token: string): Promise<boolean> {
   if (!token) return false;
   const db = await readDatabase();
   const entry = db.resetTokens.find((item) => item.token === token);
   return Boolean(entry && new Date(entry.expiresAt).getTime() > Date.now());
 }
 
-export async function resetDemoPassword(
+export async function resetLocalPassword(
   token: string,
   password: string,
 ): Promise<boolean> {

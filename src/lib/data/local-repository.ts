@@ -3,8 +3,8 @@ import { lessons as allLessons } from "@/lib/content/lessons";
 import { missions as allMissions } from "@/lib/content/missions";
 import { modules as allModules, phases as allPhases } from "@/lib/content/curriculum";
 import { skills as allSkills, skillCategories as allSkillCategories } from "@/lib/content/skills";
-import { readDatabase, updateDatabase } from "@/lib/demo/db";
-import type { DemoDatabase } from "@/lib/demo/seed";
+import { readDatabase, updateDatabase } from "@/lib/local/database";
+import type { LocalDatabase } from "@/lib/local/seed";
 import type {
   AuthUser,
   Lesson,
@@ -61,7 +61,7 @@ function normalizeMilestones(project: Project): Project {
   };
 }
 
-export class DemoRepository implements DataRepository {
+export class LocalRepository implements DataRepository {
   async ensureProfile(user: AuthUser): Promise<Profile> {
     const db = await readDatabase();
     const existing = db.profiles.find((profile) => profile.id === user.id);
@@ -458,5 +458,5 @@ export class DemoRepository implements DataRepository {
   }
 }
 
-export const demoRepository = new DemoRepository();
-export type DemoDatabaseShape = DemoDatabase;
+export const localRepository = new LocalRepository();
+export type LocalDatabaseShape = LocalDatabase;

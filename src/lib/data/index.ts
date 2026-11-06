@@ -1,10 +1,10 @@
-import { isDemoMode } from "@/lib/config";
-import { demoRepository } from "./demo-repository";
+import { isLocalMode } from "@/lib/config";
+import { localRepository } from "./local-repository";
 import type { DataRepository } from "./repository";
 import { supabaseRepository } from "./supabase-repository";
 
-export const repository: DataRepository = isDemoMode
-  ? demoRepository
+export const repository: DataRepository = isLocalMode
+  ? localRepository
   : supabaseRepository;
 
 export type { DataRepository, MissionProgressPatch, ProfileInput } from "./repository";

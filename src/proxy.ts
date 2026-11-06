@@ -1,14 +1,14 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
-import { isDemoMode, supabaseConfig } from "@/lib/config";
+import { isLocalMode, supabaseConfig } from "@/lib/config";
 
 /**
  * Rafraîchit la session Supabase sur chaque requête. Sans ce proxy, un jeton
  * expiré rendrait les pages privées inaccessibles malgré un cookie présent.
- * En mode démonstration, la session est validée directement dans le layout.
+ * En mode local, la session est validée directement dans le layout.
  */
 export async function proxy(request: NextRequest) {
-  if (isDemoMode) {
+  if (isLocalMode) {
     return NextResponse.next({ request });
   }
 

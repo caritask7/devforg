@@ -1,18 +1,18 @@
 import { cookies } from "next/headers";
 import { randomBytes } from "node:crypto";
 import { redirect } from "next/navigation";
-import { isDemoMode } from "@/lib/config";
-import { readDatabase, updateDatabase } from "@/lib/demo/db";
+import { isLocalMode } from "@/lib/config";
+import { readDatabase, updateDatabase } from "@/lib/local/database";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import type { AuthUser } from "@/lib/types";
 
-const DEMO_COOKIE = "devforge_demo_session";
+const LOCAL_COOKIE = "devforge_local_session";
 const SESSION_DAYS = 30;
 
 export async function getCurrentUser(): Promise<AuthUser | null> {
-  if (isDemoMode) {
+  if (isLocalMode) {
     const cookieStore = await cookies();
-    const token = cookieStore.get(DEMO_COOKIE)?.value;
+    const token = cookieStore.get(LOCAL_COOKIE)?.value;
     if (!token) return null;
 
     const db = await readDatabase();
@@ -41,7 +41,7 @@ export async function requireUser(): Promise<AuthUser> {
   return user;
 }
 
-export async function createDemoSession(userId: string): Promise<void> {
+export async function createLocalSession(userId: string): Promise<void> {
   const token = randomBytes(32).toString("hex");
   const expiresAt = new Date(Date.now() + SESSION_DAYS * 86_400_000);
 
@@ -53,7 +53,7 @@ export async function createDemoSession(userId: string): Promise<void> {
   });
 
   const cookieStore = await cookies();
-  cookieStore.set(DEMO_COOKIE, token, {
+  cookieStore.set(LOCAL_COOKIE, token, {
     httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
@@ -62,20 +62,20 @@ export async function createDemoSession(userId: string): Promise<void> {
   });
 }
 
-export async function destroyDemoSession(): Promise<void> {
+export async function destroyLocalSession(): Promise<void> {
   const cookieStore = await cookies();
-  const token = cookieStore.get(DEMO_COOKIE)?.value;
+  const token = cookieStore.get(LOCAL_COOKIE)?.value;
   if (token) {
     await updateDatabase((db) => {
       db.sessions = db.sessions.filter((session) => session.token !== token);
     });
   }
-  cookieStore.delete(DEMO_COOKIE);
+  cookieStore.delete(LOCAL_COOKIE);
 }
 
 export async function signOut(): Promise<void> {
-  if (isDemoMode) {
-    await destroyDemoSession();
+  if (isLocalMode) {
+    await destroyLocalSession();
     return;
   }
   const supabase = await createSupabaseServerClient();

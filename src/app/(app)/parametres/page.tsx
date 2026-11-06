@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PageHeader } from "@/components/ui/page-header";
 import { requireUser } from "@/lib/auth/session";
-import { isDemoMode } from "@/lib/config";
+import { isLocalMode } from "@/lib/config";
 import { repository } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
 import { PasswordSettingsForm } from "./password-settings-form";
@@ -119,12 +119,12 @@ export default async function SettingsPage() {
             </dl>
           </Card>
 
-          {isDemoMode ? (
-            <Alert tone="info" title="Mode démonstration">
+          {isLocalMode ? (
+            <Alert tone="info" title="Mode local">
               <p className="mt-1 text-[11px] leading-relaxed">
                 Les données sont enregistrées localement dans{" "}
                 <code className="rounded bg-white/60 px-1 py-0.5 font-mono text-[10px]">
-                  data/demo-db.json
+                  data/local-db.json
                 </code>
                 . Renseignez les variables Supabase dans{" "}
                 <code className="rounded bg-white/60 px-1 py-0.5 font-mono text-[10px]">

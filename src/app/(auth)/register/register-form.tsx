@@ -46,7 +46,7 @@ export function RegisterForm() {
             id="fullName"
             name="fullName"
             autoComplete="name"
-            placeholder="Alexandre Vasseur"
+            placeholder="Votre nom complet"
             required
           />
         </Field>

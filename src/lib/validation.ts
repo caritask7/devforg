@@ -127,7 +127,7 @@ export const projectSchema = z.object({
     .trim()
     .max(300)
     .refine((value) => value === "" || /^https?:\/\//.test(value), {
-      message: "Le lien de démonstration doit commencer par http:// ou https://",
+      message: "Le lien du projet doit commencer par http:// ou https://",
     }),
   results: z.string().trim().max(2000, "Les résultats sont trop longs.").default(""),
   milestones: z

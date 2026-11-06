@@ -2,7 +2,7 @@ import { randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
 
 const KEY_LENGTH = 64;
 
-/** Hachage scrypt utilisé uniquement par le mode démonstration local. */
+/** Hachage scrypt utilisé uniquement par le mode local (sans Supabase). */
 export function hashPassword(password: string): string {
   const salt = randomBytes(16).toString("hex");
   const derived = scryptSync(password, salt, KEY_LENGTH).toString("hex");

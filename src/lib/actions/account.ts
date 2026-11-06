@@ -3,9 +3,9 @@
 import { revalidatePath } from "next/cache";
 import { getCurrentUser } from "@/lib/auth/session";
 import { repository } from "@/lib/data";
-import { readDatabase, updateDatabase } from "@/lib/demo/db";
-import { hashPassword, verifyPassword } from "@/lib/demo/password";
-import { isDemoMode } from "@/lib/config";
+import { readDatabase, updateDatabase } from "@/lib/local/database";
+import { hashPassword, verifyPassword } from "@/lib/local/password";
+import { isLocalMode } from "@/lib/config";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import {
   changePasswordSchema,
@@ -65,10 +65,10 @@ export async function changePasswordAction(
   const user = await getCurrentUser();
   if (!user) return { error: "Session expirée. Reconnectez-vous." };
 
-  if (isDemoMode) {
+  if (isLocalMode) {
     const db = await readDatabase();
-    const demoUser = db.users.find((item) => item.id === user.id);
-    if (!demoUser || !verifyPassword(parsed.data.currentPassword, demoUser.passwordHash)) {
+    const localUser = db.users.find((item) => item.id === user.id);
+    if (!localUser || !verifyPassword(parsed.data.currentPassword, localUser.passwordHash)) {
       return { error: "Le mot de passe actuel est incorrect." };
     }
     const passwordHash = hashPassword(parsed.data.password);
