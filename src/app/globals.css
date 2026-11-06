@@ -1,0 +1,397 @@
+@import "tailwindcss";
+
+/* --------------------------------------------------------------------------
+   DEVFORGE — Design tokens
+   Source : maquette « Devforge Precision Engineering »
+   -------------------------------------------------------------------------- */
+@theme {
+  --color-canvas: #f8f9fc;
+  --color-surface: #ffffff;
+  --color-ink: #172033;
+  --color-muted: #7b8495;
+  --color-accent: #5267e8;
+  --color-accent-strong: #4355cc;
+  --color-accent-soft: #eef1fd;
+  --color-line: #e9ecf2;
+  --color-line-strong: #d9dee7;
+  --color-tint: #f1f4f9;
+  --color-success: #059669;
+  --color-success-soft: #ecfdf5;
+  --color-warning: #b45309;
+  --color-warning-soft: #fffbeb;
+  --color-danger: #dc2626;
+  --color-danger-soft: #fef2f2;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-mono: var(--font-mono-jetbrains), ui-monospace, "SFMono-Regular",
+    "Cascadia Code", monospace;
+
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  --shadow-card: 0 1px 3px 0 rgba(23, 32, 51, 0.04),
+    0 1px 2px -1px rgba(23, 32, 51, 0.02);
+  --shadow-lift: 0 4px 6px -1px rgba(23, 32, 51, 0.05),
+    0 2px 4px -2px rgba(23, 32, 51, 0.03);
+  --shadow-overlay: 0 12px 24px -4px rgba(23, 32, 51, 0.08),
+    0 4px 6px -2px rgba(23, 32, 51, 0.03);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  /* Cartes ----------------------------------------------------------------- */
+  .df-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+  }
+
+  .df-card-interactive {
+    transition:
+      border-color 180ms ease,
+      box-shadow 180ms ease,
+      transform 180ms ease;
+  }
+
+  .df-card-interactive:hover {
+    border-color: var(--color-line-strong);
+    box-shadow: var(--shadow-lift);
+  }
+
+  /* Libellés techniques ----------------------------------------------------- */
+  .df-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .df-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .df-divider {
+    height: 1px;
+    background-color: var(--color-line);
+  }
+
+  /* Liens ------------------------------------------------------------------- */
+  .df-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+
+  .df-link:hover {
+    color: var(--color-accent-strong);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* Scrollbar discrète ------------------------------------------------------ */
+  .df-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-line-strong) transparent;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Contenu pédagogique (Markdown)
+   -------------------------------------------------------------------------- */
+.prose-devforge {
+  color: #33405c;
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+
+.prose-devforge > :first-child {
+  margin-top: 0;
+}
+
+.prose-devforge p {
+  margin: 1rem 0;
+}
+
+.prose-devforge h2 {
+  margin: 2.25rem 0 0.85rem;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  scroll-margin-top: 6rem;
+}
+
+.prose-devforge h3 {
+  margin: 1.9rem 0 0.65rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-ink);
+}
+
+.prose-devforge h4 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.prose-devforge ul,
+.prose-devforge ol {
+  margin: 1rem 0;
+  padding-left: 1.4rem;
+}
+
+.prose-devforge ul {
+  list-style: disc;
+}
+
+.prose-devforge ol {
+  list-style: decimal;
+}
+
+.prose-devforge li {
+  margin: 0.4rem 0;
+  padding-left: 0.2rem;
+}
+
+.prose-devforge li::marker {
+  color: #9aa3b5;
+}
+
+.prose-devforge strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.prose-devforge a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-devforge blockquote {
+  margin: 1.5rem 0;
+  padding: 0.9rem 1.1rem;
+  border-left: 2px solid var(--color-accent);
+  background-color: var(--color-accent-soft);
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #3b4a6b;
+}
+
+.prose-devforge blockquote p {
+  margin: 0;
+}
+
+.prose-devforge hr {
+  margin: 2.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.prose-devforge table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.prose-devforge th {
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--color-line-strong);
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.prose-devforge td {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.prose-devforge :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.83em;
+  padding: 0.15em 0.38em;
+  border-radius: 0.3rem;
+  background-color: var(--color-accent-soft);
+  color: #3a49b5;
+  border: 1px solid rgba(82, 103, 232, 0.1);
+  white-space: nowrap;
+}
+
+.prose-devforge pre {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  background-color: #0f172a;
+  border: 1px solid rgba(23, 32, 51, 0.9);
+  padding: 1.1rem 1.25rem;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.prose-devforge pre code {
+  font-family: var(--font-mono);
+  background: transparent;
+  color: #e2e8f0;
+  padding: 0;
+  border: 0;
+  white-space: pre;
+}
+
+/* highlight.js — palette sobre sur fond sombre */
+.hljs-comment,
+.hljs-quote {
+  color: #7c8aa5;
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-name {
+  color: #a5b4fc;
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #86efac;
+}
+.hljs-number,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #fbbf24;
+}
+.hljs-title,
+.hljs-section,
+.hljs-title.class_,
+.hljs-title.function_ {
+  color: #93c5fd;
+}
+.hljs-type,
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #67e8f9;
+}
+.hljs-attr,
+.hljs-property {
+  color: #c4b5fd;
+}
+.hljs-meta,
+.hljs-tag {
+  color: #f0abfc;
+}
+.hljs-deletion {
+  color: #fca5a5;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: 700;
+}
+
+/* Animations ---------------------------------------------------------------- */
+@keyframes df-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: df-fade-up 320ms ease-out both;
+}
+
+@keyframes df-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.6) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: df-shimmer 1.6s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

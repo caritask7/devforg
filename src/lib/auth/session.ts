@@ -1,0 +1,83 @@
+import { cookies } from "next/headers";
+import { randomBytes } from "node:crypto";
+import { redirect } from "next/navigation";
+import { isDemoMode } from "@/lib/config";
+import { readDatabase, updateDatabase } from "@/lib/demo/db";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
+import type { AuthUser } from "@/lib/types";
+
+const DEMO_COOKIE = "devforge_demo_session";
+const SESSION_DAYS = 30;
+
+export async function getCurrentUser(): Promise<AuthUser | null> {
+  if (isDemoMode) {
+    const cookieStore = await cookies();
+    const token = cookieStore.get(DEMO_COOKIE)?.value;
+    if (!token) return null;
+
+    const db = await readDatabase();
+    const session = db.sessions.find((item) => item.token === token);
+    if (!session) return null;
+    if (new Date(session.expiresAt).getTime() < Date.now()) return null;
+
+    const user = db.users.find((item) => item.id === session.userId);
+    if (!user) return null;
+    return { id: user.id, email: user.email };
+  }
+
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+    error,
+  } = await supabase.auth.getUser();
+
+  if (error || !user || !user.email) return null;
+  return { id: user.id, email: user.email };
+}
+
+export async function requireUser(): Promise<AuthUser> {
+  const user = await getCurrentUser();
+  if (!user) redirect("/login");
+  return user;
+}
+
+export async function createDemoSession(userId: string): Promise<void> {
+  const token = randomBytes(32).toString("hex");
+  const expiresAt = new Date(Date.now() + SESSION_DAYS * 86_400_000);
+
+  await updateDatabase((db) => {
+    db.sessions = db.sessions.filter(
+      (session) => new Date(session.expiresAt).getTime() > Date.now(),
+    );
+    db.sessions.push({ token, userId, expiresAt: expiresAt.toISOString() });
+  });
+
+  const cookieStore = await cookies();
+  cookieStore.set(DEMO_COOKIE, token, {
+    httpOnly: true,
+    sameSite: "lax",
+    secure: process.env.NODE_ENV === "production",
+    path: "/",
+    expires: expiresAt,
+  });
+}
+
+export async function destroyDemoSession(): Promise<void> {
+  const cookieStore = await cookies();
+  const token = cookieStore.get(DEMO_COOKIE)?.value;
+  if (token) {
+    await updateDatabase((db) => {
+      db.sessions = db.sessions.filter((session) => session.token !== token);
+    });
+  }
+  cookieStore.delete(DEMO_COOKIE);
+}
+
+export async function signOut(): Promise<void> {
+  if (isDemoMode) {
+    await destroyDemoSession();
+    return;
+  }
+  const supabase = await createSupabaseServerClient();
+  await supabase.auth.signOut();
+}

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed":"#ffdbc7","surface-bright":"#f9f9ff","tertiary":"#924500","surface":"#f9f9ff","on-surface":"#121b2e","on-surface-variant":"#444654","inverse-primary":"#bbc3ff","outline":"#757686","on-secondary-container":"#00714e","surface-variant":"#d9e2fc","on-primary":"#ffffff","on-secondary-fixed-variant":"#005137","surface-container-high":"#e1e8ff","tertiary-container":"#b75900","secondary":"#006c4a","surface-container-highest":"#d9e2fc","on-tertiary-fixed-variant":"#733600","secondary-container":"#82f5c1","primary":"#364cce","background":"#f9f9ff","on-secondary-fixed":"#002114","on-error":"#ffffff","error-container":"#ffdad6","primary-fixed-dim":"#bbc3ff","surface-container-low":"#f1f3ff","inverse-surface":"#273044","on-primary-container":"#fdfaff","primary-fixed":"#dee0ff","on-error-container":"#93000a","secondary-fixed":"#85f8c4","outline-variant":"#c5c5d6","on-secondary":"#ffffff","error":"#ba1a1a","inverse-on-surface":"#edf0ff","primary-container":"#5267e8","tertiary-fixed-dim":"#ffb688","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#311300","on-tertiary":"#ffffff","on-background":"#121b2e","surface-container":"#e9edff","on-primary-fixed":"#000e5e","surface-dim":"#d1daf4","secondary-fixed-dim":"#68dba9","surface-tint":"#3a50d1","on-tertiary-container":"#fff9f8","on-primary-fixed-variant":"#1c34b9"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","gutter-mobile":"1rem","margin-mobile":"1rem","space-xl":"2.5rem","margin":"2rem","space-sm":"0.5rem","space-md":"1rem","gutter":"1.5rem","space-lg":"1.5rem"},"fontFamily":{"headline-xl-mobile":["Inter"],"headline-lg":["Inter"],"code-inline":["JetBrains Mono"],"headline-xl":["Inter"],"code-block":["JetBrains Mono"],"body-md":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"body-sm":["Inter"]},"fontSize":{"headline-xl-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"code-block":["13px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="DEVFORGE Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vz9DROTa3ihCV7z6mUvcvuP0Gr8D5UK75qbvCP218_YzE6QlambSxZ1k4gR4-ZZnBBq_Bh_YIkzWdXeOS5bsd0_cmVZP5Z_-xO2YG3dKj7AEE2USFnOXeVuc780ARGn80C-SeZlT5JOavAqmH--lVju6-ofKLJC8s49iePvNsYvcEpiDNH4Cr2U6NNp69EpTxZl0xnhuEQubjdK-fTI2TPuwzYcMC0Pljxx9uqulQPtQ"/><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">DEVFORGE</span></div><span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold">PRO</span></div><div class="px-space-md py-space-xs"><p class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Workspace</p></div><nav class="flex-1 px-space-md space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span>Tableau de bord</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-primary-container text-on-primary-container font-semibold" data-path="mon-parcours" href="#"><span class="material-symbols-outlined text-xl">route</span><span>Mon parcours</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="missions" href="#"><span class="material-symbols-outlined text-xl">terminal</span><span>Missions</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="mes-projets" href="#"><span class="material-symbols-outlined text-xl">folder_code</span><span>Mes projets</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="mes-competences" href="#"><span class="material-symbols-outlined text-xl">military_tech</span><span>Mes compétences</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="mon-portfolio" href="#"><span class="material-symbols-outlined text-xl">badge</span><span>Mon portfolio</span></a></nav></div><div class="p-space-md bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="flex items-center justify-between gap-space-sm p-space-xs rounded-lg hover:bg-surface-container-low transition-colors"><div class="flex items-center gap-space-sm min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP9fc49PkSCmMARJruqtM1Qr_Zk69Vb-8-iY-_7WIsz5wZz2ejPmMybjk5nHVxFubOJrTXELs0hO-DLBB4QSoHcw2QU3ZFC9UlHBY-tiElZUXN2ndUZxcqKX1DQ9RpjVSiYJAD9RaZzDwQmAtMdNJ76CwuAsUfaamN-qBuh64JDva0ijCVi6D2npCrp3TV7j1uvzzrbbD-r5cdPbGrJuD9cjPnrOMNTxhiJ_FgUd6v"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md font-semibold text-on-surface truncate">Alexandre V.</span><span class="font-label-sm text-label-sm text-outline truncate">Niveau 3 • Ingénierie</span></div></div><a class="p-1 text-on-surface-variant hover:text-on-surface rounded transition-colors" data-path="parametres" href="#" title="Paramètres"><span class="material-symbols-outlined text-lg">settings</span></a></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><img alt="DEVFORGE Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vz9DROTa3ihCV7z6mUvcvuP0Gr8D5UK75qbvCP218_YzE6QlambSxZ1k4gR4-ZZnBBq_Bh_YIkzWdXeOS5bsd0_cmVZP5Z_-xO2YG3dKj7AEE2USFnOXeVuc780ARGn80C-SeZlT5JOavAqmH--lVju6-ofKLJC8s49iePvNsYvcEpiDNH4Cr2U6NNp69EpTxZl0xnhuEQubjdK-fTI2TPuwzYcMC0Pljxx9uqulQPtQ"/><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">DEVFORGE</span><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-base text-outline">search</span><span class="font-body-sm text-body-sm text-outline">Recherche rapide...</span><kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-outline font-code-inline text-code-inline shadow-[0_1px_2px_rgba(0,0,0,0.04)]">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-container/30 text-on-secondary-container font-label-md text-label-md"><span class="material-symbols-outlined text-base text-secondary">local_fire_department</span><span class="font-semibold">14 jours d'affilée</span></div><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"></span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP9fc49PkSCmMARJruqtM1Qr_Zk69Vb-8-iY-_7WIsz5wZz2ejPmMybjk5nHVxFubOJrTXELs0hO-DLBB4QSoHcw2QU3ZFC9UlHBY-tiElZUXN2ndUZxcqKX1DQ9RpjVSiYJAD9RaZzDwQmAtMdNJ76CwuAsUfaamN-qBuh64JDva0ijCVi6D2npCrp3TV7j1uvzzrbbD-r5cdPbGrJuD9cjPnrOMNTxhiJ_FgUd6v"/></div></header><main class="relative pt-16 flex-1 w-full px-space-lg py-space-lg bg-surface"><div class="flex flex-col w-full">
+<!-- PAGE HEADER & SYNTHESIS STRIP -->
+<div class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">
+<span class="material-symbols-outlined text-base text-primary">route</span>
+<span>CURRICULUM TECHNIQUE RIGOREUX</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Mon Parcours</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+          Feuille de route technique structurée pour acquérir une maîtrise fondamentale et rigoureuse du développement logiciel.
+        </p>
+</div>
+<!-- Quick Action / Download PDF Syllabus -->
+<div class="flex items-center gap-space-sm self-start lg:self-auto">
+<button class="px-space-md py-2 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Exporter le syllabus</span>
+</button>
+<button class="px-space-md py-2 bg-primary text-on-primary hover:bg-primary-container rounded-lg font-label-md text-label-md flex items-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">play_arrow</span>
+<span>Reprendre le module actif</span>
+</button>
+</div>
+</div>
+<!-- GLOBAL PROGRESS KPI CARD -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-wrap items-center gap-space-lg w-full lg:w-auto">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 flex items-center justify-center flex-shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary transition-all duration-700 ease-out" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="43, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-headline-sm text-headline-sm font-bold text-on-surface">43%</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">SYNTHÈSE GLOBALE</div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface">Phase active : Ingénierie logicielle</div>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-high hidden md:block"></div>
+<div class="flex items-center gap-space-md">
+<div class="p-2.5 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">fact_check</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Modules validés</div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+              24 <span class="font-body-md text-body-md text-outline font-normal">/ 56</span>
+</div>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-high hidden md:block"></div>
+<div class="flex items-center gap-space-md">
+<div class="p-2.5 rounded-lg bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">timer</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Temps d'exécution estimé</div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface">148 h <span class="font-body-sm text-body-sm text-outline font-normal">restantes</span></div>
+</div>
+</div>
+</div>
+<!-- Linear visual gauge for phases -->
+<div class="w-full lg:w-72 flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-sm text-label-sm text-outline font-semibold">
+<span>PIPELINE DE FORMATION</span>
+<span class="text-primary">PHASE 1 • 82%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high flex overflow-hidden gap-0.5">
+<div class="h-full bg-secondary" style="width: 25%" title="Phase 1 (82%)"></div>
+<div class="h-full bg-primary" style="width: 18%" title="Phase 2 (En préparation)"></div>
+<div class="h-full bg-surface-container-highest" style="width: 30%" title="Phase 3 (Verrouillée)"></div>
+<div class="h-full bg-surface-container-highest" style="width: 27%" title="Phase 4 (Verrouillée)"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ROADMAP TIMELINE CONTAINER -->
+<div class="relative flex flex-col gap-space-xl">
+<!-- VERTICAL CONNECTING AXIS -->
+<div class="absolute left-6 lg:left-8 top-10 bottom-10 w-0.5 bg-surface-container-high -z-0"></div>
+<!-- ========================================== -->
+<!-- PHASE 1: FONDAMENTAUX (FULLY DETAILED) -->
+<!-- ========================================== -->
+<section class="relative pl-14 lg:pl-20">
+<!-- Milestone Indicator Node -->
+<div class="absolute left-3 lg:left-5 top-5 w-6 h-6 -translate-x-1/2 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<div class="w-3.5 h-3.5 rounded-full bg-secondary"></div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-lg">
+<!-- Phase Meta & Status Header -->
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase font-semibold">Phase 01</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                En cours / Avancé
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+              Fondamentaux du développement &amp; Algorithmique
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+              Maîtriser la pensée algorithmique, la syntaxe des langages typés et interprétés, et la gestion rigoureuse de la mémoire.
+            </p>
+</div>
+<div class="flex md:flex-col items-end justify-between md:justify-start gap-1 flex-shrink-0">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">82% accompli</span>
+<div class="w-32 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary transition-all" style="width: 82%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">14 / 16 sessions validées</span>
+</div>
+</div>
+<!-- Target Competencies Pills -->
+<div class="flex flex-wrap items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold px-2">Compétences cibles :</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-code-inline text-code-inline shadow-sm">Python moderne</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-code-inline text-code-inline shadow-sm">Pointeurs &amp; structures en C</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-code-inline text-code-inline shadow-sm">Algorithmique (complexité Big O)</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-code-inline text-code-inline shadow-sm">Git &amp; cycle de développement</span>
+</div>
+<!-- Phase 1 Module Grid -->
+<div class="flex flex-col gap-space-sm pt-2">
+<div class="font-label-md text-label-md font-semibold text-on-surface uppercase tracking-wider">
+            Modules du cursus détaillé
+          </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- MODULE 1: COMPLETED -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low/50 transition-colors shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/20 text-secondary flex items-center justify-center font-bold font-code-inline text-code-inline flex-shrink-0">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Module 01</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Fondamentaux de Python &amp; Typage statique</h3>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm font-semibold flex-shrink-0">
+                  100%
+                </span>
+</div>
+<div class="space-y-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Syntaxe standard, duck-typing vs typage explicite (Mypy), gestion fine des générateurs et context managers.
+                </p>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline pt-2">
+<span class="flex items-center gap-1 font-code-inline"><span class="material-symbols-outlined text-sm">schedule</span> 18h consacrées</span>
+<span class="text-secondary font-medium flex items-center gap-0.5">Validé avec distinction</span>
+</div>
+</div>
+</div>
+<!-- MODULE 2: COMPLETED -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low/50 transition-colors shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/20 text-secondary flex items-center justify-center font-bold font-code-inline text-code-inline flex-shrink-0">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Module 02</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Structures linéaires : Listes, Piles, Files</h3>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm font-semibold flex-shrink-0">
+                  100%
+                </span>
+</div>
+<div class="space-y-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Implémentation bas-niveau en C, allocations contiguës vs chaînées, buffer circulaire, benchmark de cache CPU.
+                </p>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline pt-2">
+<span class="flex items-center gap-1 font-code-inline"><span class="material-symbols-outlined text-sm">schedule</span> 24h consacrées</span>
+<span class="text-secondary font-medium flex items-center gap-0.5">Validé avec distinction</span>
+</div>
+</div>
+</div>
+<!-- MODULE 3: IN PROGRESS (ACTIVE) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low/50 transition-colors shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-bold font-code-inline text-code-inline flex-shrink-0">
+<span class="material-symbols-outlined text-lg">terminal</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Module 03</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Arbres, Graphes &amp; Parcours de complexité</h3>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold flex-shrink-0">
+                  En cours • 70%
+                </span>
+</div>
+<div class="space-y-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Arbres AVL, recherche en largeur (BFS), recherche en profondeur (DFS), algorithme de Dijkstra, bornes asymptotiques.
+                </p>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all" style="width: 70%"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm pt-1">
+<span class="text-outline font-code-inline">Exercice 14/20 : DAG &amp; Tri Topologique</span>
+<a class="text-primary font-semibold hover:underline flex items-center gap-0.5" href="#">
+                    Continuer <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- MODULE 4: TO DO -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low/50 transition-colors shadow-sm flex flex-col justify-between gap-space-md opacity-90">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center font-bold font-code-inline text-code-inline flex-shrink-0">
+<span class="material-symbols-outlined text-lg">lock_clock</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Module 04</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Programmation concurrente &amp; Modèles d'exécution</h3>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold flex-shrink-0">
+                  À commencer • 0%
+                </span>
+</div>
+<div class="space-y-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Threads, mutexes, conditions de course (race conditions), coroutines asynchrones (async/await) et boucle d'événements.
+                </p>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 0%"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline pt-1">
+<span class="font-code-inline">Prévu après validation Module 03</span>
+<span class="font-medium">12 exercices au programme</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Sandbox / Interactive Snapshot banner -->
+<div class="mt-space-xs p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">memory</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Atelier pratique en sandbox C/Python</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Projet de synthèse de la Phase 1 : Implémenter un moteur de sérialisation binaire avec arbre binaire auto-équilibré.</div>
+</div>
+</div>
+<button class="w-full sm:w-auto px-space-md py-2 bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg shadow-sm whitespace-nowrap transition-colors" type="button">
+            Voir le cahier des charges
+          </button>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- PHASE 2: INGENIERIE LOGICIELLE (PROCHAINEMENT) -->
+<!-- ========================================== -->
+<section class="relative pl-14 lg:pl-20">
+<!-- Milestone Indicator Node -->
+<div class="absolute left-3 lg:left-5 top-5 w-6 h-6 -translate-x-1/2 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<div class="w-3.5 h-3.5 rounded-full bg-primary"></div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase font-semibold">Phase 02</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">lock_open</span>
+                Déverrouillée à 85% de la Phase 1 (Bientôt disponible)
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+              Ingénierie logicielle &amp; Architecture
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+              Conception orientée objet robuste, patrons de conception (Design Patterns), tests unitaires et intégration continue.
+            </p>
+</div>
+<div class="text-right">
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md font-semibold">
+              8 modules prévisionnels
+            </span>
+</div>
+</div>
+<!-- Competencies -->
+<div class="flex flex-wrap items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold px-2">Piliers techniques :</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-code-inline text-code-inline shadow-sm">Clean Architecture</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-code-inline text-code-inline shadow-sm">Principes SOLID</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-code-inline text-code-inline shadow-sm">Patrons GoF (Design Patterns)</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-code-inline text-code-inline shadow-sm">TDD &amp; Stratégies de Test</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-code-inline text-code-inline shadow-sm">Pipelines CI/CD</span>
+</div>
+<!-- Preview grid of upcoming modules -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm pt-2">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Module 05</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">SOLID &amp; Modularité</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Inversion de dépendances</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Module 06</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Patterns Structurels &amp; Comportement</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Factory, Strategy, Observer</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Module 07</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Test Driven Development</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pytest, Mocking, Coverage</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Module 08</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Architecture Hexagonale</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ports &amp; Adapters</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- PHASE 3: MATHEMATIQUES & FONDEMENTS (LOCKED) -->
+<!-- ========================================== -->
+<section class="relative pl-14 lg:pl-20">
+<!-- Milestone Indicator Node -->
+<div class="absolute left-3 lg:left-5 top-5 w-6 h-6 -translate-x-1/2 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<div class="w-3.5 h-3.5 rounded-full bg-surface-container-highest"></div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md opacity-85">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase font-semibold">Phase 03</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">lock</span>
+                Verrouillée (À venir)
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+              Mathématiques &amp; Fondements de l'ingénierie avancée
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+              Algèbre linéaire, probabilités, optimisation discrète et calcul matriciel appliqués aux systèmes computationnels.
+            </p>
+</div>
+<div>
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-outline font-label-md text-label-md">
+              Condition : Validation Phase 02
+            </span>
+</div>
+</div>
+<!-- Competencies -->
+<div class="flex flex-wrap items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold px-2">Disciplines couvertes :</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-outline font-code-inline text-code-inline shadow-sm">Algèbre matricielle</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-outline font-code-inline text-code-inline shadow-sm">Calcul différentiel</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-outline font-code-inline text-code-inline shadow-sm">Optimisation convexe</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-outline font-code-inline text-code-inline shadow-sm">Théorie des probabilités</span>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- PHASE 4: SYSTEMES DISTRIBUES (LOCKED) -->
+<!-- ========================================== -->
+<section class="relative pl-14 lg:pl-20 mb-space-lg">
+<!-- Milestone Indicator Node -->
+<div class="absolute left-3 lg:left-5 top-5 w-6 h-6 -translate-x-1/2 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<div class="w-3.5 h-3.5 rounded-full bg-surface-container-highest"></div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md opacity-85">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase font-semibold">Phase 04</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">lock</span>
+                Verrouillée (Niveau Master)
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+              Systèmes distribués &amp; Mise en production
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+              Scalabilité horizontale, protocoles de consensus, observabilité télémétrique et bases de données hautement partitionnées.
+            </p>
+</div>
+<div>
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-outline font-label-md text-label-md">
+              Palier d'accréditation finale
+            </span>
+</div>
+</div>
+<!-- Competencies -->
+<div class="flex flex-wrap items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold px-2">Technologies clés :</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-outline font-code-inline text-code-inline shadow-sm">Raft / Paxos Consensus</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-outline font-code-inline text-code-inline shadow-sm">Kafka &amp; Streaming d'évènements</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-outline font-code-inline text-code-inline shadow-sm">Kubernetes &amp; Service Mesh</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-outline font-code-inline text-code-inline shadow-sm">Théorème CAP &amp; Partitioning</span>
+</div>
+</div>
+</section>
+</div>
+<!-- PERSISTENT LEARNING FOOTER INFO -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+        Programme validé par le Conseil d'Ingénierie DevForge • Édition académique 2025
+      </span>
+</div>
+<div class="flex items-center gap-space-md">
+<a class="font-label-md text-label-md text-outline hover:text-on-surface transition-colors" href="#">
+        Critères d'évaluation
+      </a>
+<span class="text-outline">•</span>
+<a class="font-label-md text-label-md text-primary font-medium hover:underline" href="#">
+        Contacter mon tuteur référent
+      </a>
+</div>
+</div>
+</div></main></div></body></html>

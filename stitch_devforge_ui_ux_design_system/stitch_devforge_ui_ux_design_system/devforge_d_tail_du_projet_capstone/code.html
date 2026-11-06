@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed":"#ffdbc7","surface-bright":"#f9f9ff","tertiary":"#924500","surface":"#f9f9ff","on-surface":"#121b2e","on-surface-variant":"#444654","inverse-primary":"#bbc3ff","outline":"#757686","on-secondary-container":"#00714e","surface-variant":"#d9e2fc","on-primary":"#ffffff","on-secondary-fixed-variant":"#005137","surface-container-high":"#e1e8ff","tertiary-container":"#b75900","secondary":"#006c4a","surface-container-highest":"#d9e2fc","on-tertiary-fixed-variant":"#733600","secondary-container":"#82f5c1","primary":"#364cce","background":"#f9f9ff","on-secondary-fixed":"#002114","on-error":"#ffffff","error-container":"#ffdad6","primary-fixed-dim":"#bbc3ff","surface-container-low":"#f1f3ff","inverse-surface":"#273044","on-primary-container":"#fdfaff","primary-fixed":"#dee0ff","on-error-container":"#93000a","secondary-fixed":"#85f8c4","outline-variant":"#c5c5d6","on-secondary":"#ffffff","error":"#ba1a1a","inverse-on-surface":"#edf0ff","primary-container":"#5267e8","tertiary-fixed-dim":"#ffb688","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#311300","on-tertiary":"#ffffff","on-background":"#121b2e","surface-container":"#e9edff","on-primary-fixed":"#000e5e","surface-dim":"#d1daf4","secondary-fixed-dim":"#68dba9","surface-tint":"#3a50d1","on-tertiary-container":"#fff9f8","on-primary-fixed-variant":"#1c34b9"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","gutter-mobile":"1rem","margin-mobile":"1rem","space-xl":"2.5rem","margin":"2rem","space-sm":"0.5rem","space-md":"1rem","gutter":"1.5rem","space-lg":"1.5rem"},"fontFamily":{"headline-xl-mobile":["Inter"],"headline-lg":["Inter"],"code-inline":["JetBrains Mono"],"headline-xl":["Inter"],"code-block":["JetBrains Mono"],"body-md":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"body-sm":["Inter"]},"fontSize":{"headline-xl-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"code-block":["13px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="DEVFORGE Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vz9DROTa3ihCV7z6mUvcvuP0Gr8D5UK75qbvCP218_YzE6QlambSxZ1k4gR4-ZZnBBq_Bh_YIkzWdXeOS5bsd0_cmVZP5Z_-xO2YG3dKj7AEE2USFnOXeVuc780ARGn80C-SeZlT5JOavAqmH--lVju6-ofKLJC8s49iePvNsYvcEpiDNH4Cr2U6NNp69EpTxZl0xnhuEQubjdK-fTI2TPuwzYcMC0Pljxx9uqulQPtQ"/><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">DEVFORGE</span></div><span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold">PRO</span></div><div class="px-space-md py-space-xs"><p class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Workspace</p></div><nav class="flex-1 px-space-md space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span>Tableau de bord</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="mon-parcours" href="#"><span class="material-symbols-outlined text-xl">route</span><span>Mon parcours</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="missions" href="#"><span class="material-symbols-outlined text-xl">terminal</span><span>Missions</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="mes-projets" href="#"><span class="material-symbols-outlined text-xl">folder_code</span><span>Mes projets</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="mes-competences" href="#"><span class="material-symbols-outlined text-xl">military_tech</span><span>Mes compétences</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="mon-portfolio" href="#"><span class="material-symbols-outlined text-xl">badge</span><span>Mon portfolio</span></a></nav></div><div class="p-space-md bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="flex items-center justify-between gap-space-sm p-space-xs rounded-lg hover:bg-surface-container-low transition-colors"><div class="flex items-center gap-space-sm min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP9fc49PkSCmMARJruqtM1Qr_Zk69Vb-8-iY-_7WIsz5wZz2ejPmMybjk5nHVxFubOJrTXELs0hO-DLBB4QSoHcw2QU3ZFC9UlHBY-tiElZUXN2ndUZxcqKX1DQ9RpjVSiYJAD9RaZzDwQmAtMdNJ76CwuAsUfaamN-qBuh64JDva0ijCVi6D2npCrp3TV7j1uvzzrbbD-r5cdPbGrJuD9cjPnrOMNTxhiJ_FgUd6v"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md font-semibold text-on-surface truncate">Alexandre V.</span><span class="font-label-sm text-label-sm text-outline truncate">Niveau 3 • Ingénierie</span></div></div><a class="p-1 text-on-surface-variant hover:text-on-surface rounded transition-colors" data-path="parametres" href="#" title="Paramètres"><span class="material-symbols-outlined text-lg">settings</span></a></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><img alt="DEVFORGE Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vz9DROTa3ihCV7z6mUvcvuP0Gr8D5UK75qbvCP218_YzE6QlambSxZ1k4gR4-ZZnBBq_Bh_YIkzWdXeOS5bsd0_cmVZP5Z_-xO2YG3dKj7AEE2USFnOXeVuc780ARGn80C-SeZlT5JOavAqmH--lVju6-ofKLJC8s49iePvNsYvcEpiDNH4Cr2U6NNp69EpTxZl0xnhuEQubjdK-fTI2TPuwzYcMC0Pljxx9uqulQPtQ"/><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">DEVFORGE</span><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-base text-outline">search</span><span class="font-body-sm text-body-sm text-outline">Recherche rapide...</span><kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-outline font-code-inline text-code-inline shadow-[0_1px_2px_rgba(0,0,0,0.04)]">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-container/30 text-on-secondary-container font-label-md text-label-md"><span class="material-symbols-outlined text-base text-secondary">local_fire_department</span><span class="font-semibold">14 jours d'affilée</span></div><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"></span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP9fc49PkSCmMARJruqtM1Qr_Zk69Vb-8-iY-_7WIsz5wZz2ejPmMybjk5nHVxFubOJrTXELs0hO-DLBB4QSoHcw2QU3ZFC9UlHBY-tiElZUXN2ndUZxcqKX1DQ9RpjVSiYJAD9RaZzDwQmAtMdNJ76CwuAsUfaamN-qBuh64JDva0ijCVi6D2npCrp3TV7j1uvzzrbbD-r5cdPbGrJuD9cjPnrOMNTxhiJ_FgUd6v"/></div></header><main class="relative pt-16 flex-1 w-full px-space-lg py-space-lg bg-surface"><div class="flex flex-col w-full">
+<!-- Script for sidebar active link highlight -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('aside nav a').forEach(el => {
+        el.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+        el.classList.add('text-on-surface-variant');
+      });
+      const current = document.querySelector('aside nav a[data-path="mes-projets"]');
+      if (current) {
+        current.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+        current.classList.remove('text-on-surface-variant');
+      }
+    });
+  </script>
+<!-- 1. BREADCRUMB & TOP ACTIONS HEADER -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<!-- Breadcrumb -->
+<nav aria-label="Fil d'Ariane" class="flex items-center gap-2 text-outline font-label-md text-label-md">
+<a class="inline-flex items-center gap-1 hover:text-on-surface transition-colors font-medium" data-path="mes-projets" href="#">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span>Mes Projets</span>
+</a>
+<span>/</span>
+<span class="text-on-surface-variant">Projets Capstone</span>
+<span>/</span>
+<span class="text-on-surface-variant">Phase 01</span>
+<span>/</span>
+<span class="text-primary font-semibold">MicroModel</span>
+</nav>
+<!-- Status badges row -->
+<div class="flex flex-wrap items-center gap-2 mt-1">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Capstone Obligatoire • Phase 01
+        </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          En cours • Jalon 6/8
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">bolt</span>
+          Niveau Avancé
+        </span>
+</div>
+</div>
+<!-- Actions toolbar -->
+<div class="flex items-center flex-wrap gap-2.5">
+<a class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base text-outline">terminal</span>
+<span>Dépôt GitHub</span>
+<span class="text-outline font-code-inline text-code-inline">↗</span>
+</a>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-outline">download</span>
+<span>Starter Kit CLI</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary transition-colors shadow-sm" id="ci-run-btn" type="button">
+<span class="material-symbols-outlined text-base">play_arrow</span>
+<span>Lancer la suite d'évaluation CI</span>
+</button>
+</div>
+</div>
+<!-- 2. PROJECT HERO CARD & OVERVIEW METRICS -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-lg">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-sm mb-2">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">database</span>
+</div>
+<div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+              Mini-ORM Python "MicroModel"
+              <span class="ml-2 font-code-inline text-code-inline font-normal text-outline">v0.8.2-alpha</span>
+</h1>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl mt-2 leading-relaxed">
+          Conception d'une bibliothèque sans dépendance externe reproduisant les mécaniques fondamentales d'un ORM moderne (SQLAlchemy, Django ORM) : mapping déclaratif via métaclasse, constructeur de requêtes SQL composables, typage strict générique et gestionnaire de transactions ACID avec support SQLite natif.
+        </p>
+<!-- Tech tags -->
+<div class="flex flex-wrap items-center gap-2 mt-4">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface font-code-inline text-code-inline font-medium">Python 3.12</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface font-code-inline text-code-inline font-medium">Mypy Strict</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface font-code-inline text-code-inline font-medium">SQLite C-Driver</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface font-code-inline text-code-inline font-medium">AST Engine</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface font-code-inline text-code-inline font-medium">Métaprogrammation</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-primary-fixed-variant font-code-inline text-code-inline font-semibold">Zero-Dependencies</span>
+</div>
+</div>
+<!-- Radial completion mini visual -->
+<div class="w-full lg:w-72 bg-surface-container-low rounded-xl p-4 flex flex-col justify-between shrink-0">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Avancement Global</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">75%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden mb-3">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 75%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">check_circle</span>
+            5 jalons clos
+          </span>
+<span class="font-medium text-primary font-code-inline text-code-inline">Jalon 06 en revue</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN 2-COLUMN GRID (65% / 35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (65% - 8 cols on large screens) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- SECTION A: SPECIFICATIONS & ARCHITECTURE -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">account_tree</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Objectifs d'Architecture &amp; Spécifications</h2>
+</div>
+<span class="font-code-inline text-code-inline text-outline">DEVFORGE RFC-089</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center gap-2 mb-2 text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-lg">schema</span>
+<span>01. Declarative Metaclass Mapping</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Intercepter la création des classes modèles via <code class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface font-code-inline text-code-inline">__init_subclass__</code> et collecter les descripteurs de champs sans overhead mémoire à l'instanciation.
+              </p>
+</div>
+<div class="mt-3 pt-2 text-outline font-label-sm text-label-sm flex items-center justify-between">
+<span>Zero descriptor leaks</span>
+<span class="font-code-inline text-code-inline text-secondary font-semibold">O(1) lookup</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center gap-2 mb-2 text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-lg">query_builder</span>
+<span>02. QueryBuilder Composable</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Syntaxe fluide et immuable <code class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface font-code-inline text-code-inline">User.objects.filter(age__gte=18).order_by('name')</code> compilant vers des requêtes SQL paramétrées anti-injection.
+              </p>
+</div>
+<div class="mt-3 pt-2 text-outline font-label-sm text-label-sm flex items-center justify-between">
+<span>AST-safe AST compiler</span>
+<span class="font-code-inline text-code-inline text-secondary font-semibold">Parameterized</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center gap-2 mb-2 text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-lg">sync_saved_locally</span>
+<span>03. Transactions ACID &amp; Savepoints</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Context manager basé sur <code class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface font-code-inline text-code-inline">contextlib</code> gérant <code class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface font-code-inline text-code-inline">commit()</code>, <code class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface font-code-inline text-code-inline">rollback()</code> automatique sur levée d'exception et points de sauvegarde imbriqués.
+              </p>
+</div>
+<div class="mt-3 pt-2 text-outline font-label-sm text-label-sm flex items-center justify-between">
+<span>Savepoint nesting level 4</span>
+<span class="font-code-inline text-code-inline text-tertiary font-semibold">In-Progress</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center gap-2 mb-2 text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-lg">code_blocks</span>
+<span>04. Typage strict Zero-Any</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Génériques PEP 484/695 permettant l'inférence automatique des types de colonnes par les Language Servers (Pyright, VSCode, Neovim) sans générer de faux positifs.
+              </p>
+</div>
+<div class="mt-3 pt-2 text-outline font-label-sm text-label-sm flex items-center justify-between">
+<span>PEP 695 TypeParam</span>
+<span class="font-code-inline text-code-inline text-secondary font-semibold">Strict Pass</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION B: MILESTONES (JALONS DE RÉALISATION) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">flag</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Jalons de Réalisation (Milestones)</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-semibold">6 / 8 actifs</span>
+</div>
+<div class="space-y-3">
+<!-- Jalon 1 -->
+<div class="p-3.5 rounded-lg bg-surface-container-low flex items-start gap-space-sm hover:bg-surface-container transition-colors">
+<div class="w-6 h-6 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-base font-bold">check</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">Jalon 01 : Définition des descripteurs de champs typés</h3>
+<span class="font-label-sm text-label-sm text-secondary font-medium shrink-0">100% Validé</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">
+                Support <code class="font-code-inline text-code-inline">CharField</code>, <code class="font-code-inline text-code-inline">IntegerField</code>, <code class="font-code-inline text-code-inline">BooleanField</code> avec vérification de contraintes au runtime.
+              </p>
+</div>
+</div>
+<!-- Jalon 2 -->
+<div class="p-3.5 rounded-lg bg-surface-container-low flex items-start gap-space-sm hover:bg-surface-container transition-colors">
+<div class="w-6 h-6 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-base font-bold">check</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">Jalon 02 : Métaclasse et registre déclaratif du schéma</h3>
+<span class="font-label-sm text-label-sm text-secondary font-medium shrink-0">100% Validé</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">
+                Table registry singleton, détection des conflits de noms de colonnes et génération du schéma DDL initial.
+              </p>
+</div>
+</div>
+<!-- Jalon 3 -->
+<div class="p-3.5 rounded-lg bg-surface-container-low flex items-start gap-space-sm hover:bg-surface-container transition-colors">
+<div class="w-6 h-6 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-base font-bold">check</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">Jalon 03 : Compilateur de requêtes SQL composable</h3>
+<span class="font-label-sm text-label-sm text-secondary font-medium shrink-0">100% Validé</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">
+                Opérateurs SELECT, INSERT, WHERE (exact, in, gte, lte), JOIN avec tuples de paramètres sécurisés.
+              </p>
+</div>
+</div>
+<!-- Jalon 4 -->
+<div class="p-3.5 rounded-lg bg-surface-container-low flex items-start gap-space-sm hover:bg-surface-container transition-colors">
+<div class="w-6 h-6 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-base font-bold">check</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">Jalon 04 : Moteur d'hydratation des instances</h3>
+<span class="font-label-sm text-label-sm text-secondary font-medium shrink-0">100% Validé</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">
+                Désérialisation haute performance des tuples SQLite cursor sans duplication d'objets en cache local.
+              </p>
+</div>
+</div>
+<!-- Jalon 5 -->
+<div class="p-3.5 rounded-lg bg-surface-container-low flex items-start gap-space-sm hover:bg-surface-container transition-colors">
+<div class="w-6 h-6 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-base font-bold">check</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">Jalon 05 : Relations One-to-Many &amp; lazy loading sécurisé</h3>
+<span class="font-label-sm text-label-sm text-secondary font-medium shrink-0">100% Validé</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">
+                ForeignKey descriptor avec résolveur différé prévenant les boucles cycliques et les requêtes N+1.
+              </p>
+</div>
+</div>
+<!-- Jalon 6: EN COURS (HIGHLIGHTED) -->
+<div class="p-4 rounded-lg bg-surface-container-high/60 shadow-sm flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 mt-0.5 animate-pulse">
+<span class="material-symbols-outlined text-base">sync</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<h3 class="font-label-md text-label-md font-bold text-on-surface">Jalon 06 : Context Manager ACID &amp; Savepoints</h3>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold">En cours</span>
+</div>
+<span class="font-code-inline text-code-inline text-primary font-bold">85% validé</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Context manager avec support savepoints imbriqués et rollback automatique sur SQLite <code class="font-code-inline text-code-inline">OperationalError</code>.
+              </p>
+<!-- Progress detail bar -->
+<div class="mt-2.5 flex items-center gap-3">
+<div class="flex-1 h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 85%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline whitespace-nowrap">2 tests d'isolation concurrentielle restants</span>
+</div>
+</div>
+</div>
+<!-- Jalon 7: À FAIRE -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest/60 flex items-start gap-space-sm opacity-75">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-base">lock_open</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">Jalon 07 : Migrations de schéma légères (diff DDL)</h3>
+<span class="font-label-sm text-label-sm text-outline font-medium shrink-0">À faire</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">
+                Génération de scripts de migration différentiels basés sur l'inspection introspective de SQLite PRAGMA.
+              </p>
+</div>
+</div>
+<!-- Jalon 8: VERROUILLÉ -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest/40 flex items-start gap-space-sm opacity-50">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-base">lock</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">Jalon 08 : Packaging Wheel, documentation &amp; Benchmarks</h3>
+<span class="font-label-sm text-label-sm text-outline font-medium shrink-0">Verrouillé</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">
+                Wheel PEP 517 standardisé, micro-benchmarks comparatifs de latence avec SQLAlchemy 2.0 Core.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION C: GIT SUBMISSION WORKSPACE -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">commit</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Espace de Soumission &amp; Synchronisation Git</h2>
+</div>
+<span class="inline-flex items-center gap-1 font-code-inline text-code-inline text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Sync Active
+          </span>
+</div>
+<!-- Git Commit Info card -->
+<div class="bg-surface-container-low rounded-lg p-3.5 mb-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline text-xl">fork_right</span>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-code-inline text-code-inline font-bold text-on-surface">feat/nested-transactions</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-code-inline text-code-inline text-outline text-xs">HEAD</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">
+                Dernier commit : <code class="font-code-inline text-code-inline text-on-surface">e4b81c2</code> — "fix: auto-rollback on operational error"
+              </p>
+</div>
+</div>
+<span class="text-outline font-label-sm text-label-sm shrink-0">Poussé il y a 22 minutes</span>
+</div>
+<!-- Architecture Decision / Submission Form -->
+<form class="space-y-space-md" id="submission-form" onsubmit="event.preventDefault(); submitMilestone();">
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1.5" for="decision-notes">
+              Note de conception &amp; Décision d'architecture (ADR)
+            </label>
+<textarea class="w-full rounded-lg bg-surface-container-lowest p-3 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="decision-notes" placeholder="Décrivez votre choix d'implémentation pour l'isolation concurrentielle (ex: SAVEPOINT sqlite vs transaction imbriquée, gestion du threading.local...)" rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between flex-wrap gap-space-sm pt-2">
+<div class="flex items-center gap-2 text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-secondary">verified_user</span>
+<span>Analyse statique et tests automatisés pré-requis validés</span>
+</div>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors shadow-sm" id="submit-btn" type="submit">
+<span class="material-symbols-outlined text-base">send</span>
+<span>Soumettre le Jalon 06 à la revue de code</span>
+</button>
+</div>
+</form>
+</section>
+</div>
+<!-- RIGHT COLUMN (35% - 4 cols on large screens) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- CARD 1: CI/CD & QUALITY METRICS -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">fact_check</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Qualité &amp; CI/CD</h2>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<div class="space-y-4">
+<!-- Metric: Code Coverage -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Couverture de code</span>
+<span class="font-code-inline text-code-inline font-bold text-secondary">98.2%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 98.2%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Objectif &gt; 95% atteint</span>
+</div>
+<!-- Metric: Unit Tests -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium block">Tests Unitaires (pytest)</span>
+<span class="font-label-sm text-label-sm text-outline">48 passants / 2 en cours / 0 échec</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-inline text-code-inline font-bold">48/50</span>
+</div>
+</div>
+<!-- Metric: Mutation Testing -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Mutmut Mutation Testing</span>
+<span class="font-code-inline text-code-inline font-bold text-secondary">12% survie</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 12%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Score mutants &lt; 15% atteint (robuste)</span>
+</div>
+<!-- Metric: Strict Mypy -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium block">Strict Mypy Typecheck</span>
+<span class="font-label-sm text-label-sm text-outline font-code-inline text-code-inline">--disallow-any-unimported</span>
+</div>
+<span class="inline-flex items-center gap-1 text-secondary font-code-inline text-code-inline font-semibold">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+              0 erreur
+            </span>
+</div>
+<!-- Metric: Ruff Linter -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium block">Linter Ruff &amp; PEP 8</span>
+<span class="font-label-sm text-label-sm text-outline">Formatting &amp; AST Cleanliness</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-code-inline text-code-inline font-bold">10/10</span>
+</div>
+</div>
+</section>
+<!-- CARD 2: PORTFOLIO ENDORSEMENT CRITERIA -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">workspace_premium</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Homologation Portfolio</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-semibold">Élite</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+          Exigences strictes requises par les ingénieurs-examinateurs de DEVFORGE pour décerner le badge d'expertise :
+        </p>
+<ul class="space-y-3 font-body-sm text-body-sm">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_box</span>
+<span class="text-on-surface">Zero dépendance tierce <span class="text-outline font-code-inline text-code-inline">(stdlib CPython 3.12 pure)</span></span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_box</span>
+<span class="text-on-surface">Typage statique exhaustif certifié Mypy</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-outline text-base mt-0.5">check_box_outline_blank</span>
+<span class="text-on-surface-variant">100% des jalons validés <span class="text-primary font-medium">(Actuellement 6/8)</span></span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-outline text-base mt-0.5">check_box_outline_blank</span>
+<span class="text-on-surface-variant">Revue de code formelle par un Senior Staff Engineer</span>
+</li>
+</ul>
+<div class="mt-space-md p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-lg shrink-0 mt-0.5">info</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">
+            Une fois validé, ce projet sera mis en avant sur votre <strong>Portfolio public</strong> avec attestation d'ingénierie vérifiable et certificat cryptographique.
+          </p>
+</div>
+</section>
+<!-- CARD 3: CANONICAL DOCUMENTATION & REFERENCES -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center gap-2 mb-space-md">
+<span class="material-symbols-outlined text-primary text-xl">menu_book</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Références Canoniques</h2>
+</div>
+<div class="space-y-2">
+<a class="group p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors" href="https://peps.python.org/pep-0487/" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-lg transition-colors">link</span>
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">PEP 487 — Subclass Customization</span>
+</div>
+<span class="font-code-inline text-code-inline text-outline text-xs">pep.org</span>
+</a>
+<a class="group p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors" href="https://docs.python.org/3/library/sqlite3.html" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-lg transition-colors">link</span>
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">CPython sqlite3 Module Internals</span>
+</div>
+<span class="font-code-inline text-code-inline text-outline text-xs">cpython</span>
+</a>
+<a class="group p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors" href="https://docs.sqlalchemy.org/en/20/core/" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-lg transition-colors">link</span>
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">SQLAlchemy Core Architecture Overview</span>
+</div>
+<span class="font-code-inline text-code-inline text-outline text-xs">sqla</span>
+</a>
+<a class="group p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors" href="https://peps.python.org/pep-0249/" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-lg transition-colors">link</span>
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">DB-API 2.0 Specification (PEP 249)</span>
+</div>
+<span class="font-code-inline text-code-inline text-outline text-xs">pep.org</span>
+</a>
+</div>
+</section>
+</div>
+</div>
+<!-- Interactive script for CI button simulation -->
+<script>
+    const ciBtn = document.getElementById('ci-run-btn');
+    if (ciBtn) {
+      ciBtn.addEventListener('click', () => {
+        const originalContent = ciBtn.innerHTML;
+        ciBtn.innerHTML = '<span class="material-symbols-outlined text-base animate-spin">refresh</span><span>Exécution CI en cours (pytest & mypy)...</span>';
+        ciBtn.classList.add('opacity-75');
+        setTimeout(() => {
+          ciBtn.innerHTML = '<span class="material-symbols-outlined text-base text-secondary-fixed">check_circle</span><span>Évaluation CI terminée (100% Pass)</span>';
+          ciBtn.classList.remove('opacity-75');
+          setTimeout(() => {
+            ciBtn.innerHTML = originalContent;
+          }, 3500);
+        }, 2000);
+      });
+    }
+
+    function submitMilestone() {
+      const submitBtn = document.getElementById('submit-btn');
+      const notes = document.getElementById('decision-notes');
+      if (submitBtn) {
+        submitBtn.innerHTML = '<span class="material-symbols-outlined text-base animate-spin">refresh</span><span>Soumission en cours...</span>';
+        setTimeout(() => {
+          submitBtn.innerHTML = '<span class="material-symbols-outlined text-base">task_alt</span><span>Jalon 06 Soumis avec succès !</span>';
+          submitBtn.classList.add('bg-secondary', 'text-on-secondary');
+          if (notes) {
+            notes.value = '';
+            notes.placeholder = 'Votre note a bien été transmise aux évaluateurs.';
+          }
+        }, 1500);
+      }
+    }
+  </script>
+</div></main></div></body></html>
